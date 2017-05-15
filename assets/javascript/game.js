@@ -21,10 +21,10 @@ var letter = choices[Math.floor(Math.random()* choices.length)];
 
 //if userGuess presses a letter, then you either add a win point or 
 // a lose point. 
-	if((userGuess === "a") || (userGuess === "z")){
+	if((userGuess === "a") || (userGuess === "z")|| (userGuess === "c")){
 		wins++;guessLeft--;
 }
-	else if((userGuess !== "a")|| (userGuess === "z")){ 
+	else if((userGuess !== "a")|| (userGuess === "z") || (userGuess === "c")){ 
 		losses++;guessLeft--;
 }
 //You have five tries before it resets guessLeft and guessSoFar.
@@ -32,12 +32,12 @@ var letter = choices[Math.floor(Math.random()* choices.length)];
 	guessLeft = 5; guessesSoFar = [];
 
 }
-// I was trying to reset game if they guessed all letters.
- // if((userGuess === "a") && (userGuess === "z") && (userGuess === "c")) {
-	// alert ("You guessed all the letters!");
-	// location.reload();
+
+//  if(userGuess === "a")+ (userGuess === "z") + (userGuess === "c") {			
+// 	alert ("You guessed all the letters!");
+// 	location.reload();
 	
-}
+// }
 
 	var html = "<h1>The Psychic Game</h1>" +
 	//"<h2> Guess what letter I'm thinking of...</h2>"
@@ -47,8 +47,9 @@ var letter = choices[Math.floor(Math.random()* choices.length)];
 	"<p> Your guesses so far: " + guessesSoFar + "</p>";
 
 	document.querySelector("#game").innerHTML = html;
-
 }
+
+
 
 
     
