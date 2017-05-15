@@ -30,7 +30,6 @@ var letter = choices[Math.floor(Math.random()* choices.length)];
 //You have five tries before it resets guessLeft and guessSoFar.
 	if((guessLeft === 0) || (userGuess === "a") || (userGuess === "z") || (userGuess === "c")){
 	guessLeft = 5; guessesSoFar = [];
-
 }
 
 //  if(userGuess === "a")+ (userGuess === "z") + (userGuess === "c") {			
